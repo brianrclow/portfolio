@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.menu-overlay {
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+}
+
+.menu-overlay.open {
+    opacity: 1;
+}
+
+.menu {
+    transition: transform 0.2s ease-in-out;
+    transform: translateY(-100%);
+}
+
+.menu.open {
+    transform: translateY(0);
+}
