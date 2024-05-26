@@ -1,12 +1,12 @@
 # Portfolio
 
 Welcome to my portfolio! This project showcases some of my work, skills, and experiences as a software engineer.
+Check it out --> [brianrclow.com](https://www.brianrclow.com)
 
 ## Tech Stack
 
 * Frontend: Angular, Tailwind CSS
 * Icons: Font Awesome
-* Deployment: Vercel
 
 ## Getting Started
 
