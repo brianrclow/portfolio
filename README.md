@@ -5,21 +5,24 @@ Check it out --> [brianrclow.com](https://www.brianrclow.com)
 
 ## Tech Stack
 
-* Frontend: Angular, Tailwind CSS
+* Frontend: Angular 18, Tailwind CSS
 * Icons: Font Awesome
+* Containerized: Docker (nginx)
+* Hosted: Fly.io
+* CI/CD: GitHub Actions (manual deploy)
 
 ## Getting Started
 
 ### Prerequisites
 * Node.js and npm installed
-* Angular CLI installed globally (npm install -g @angular/cli)
+* Angular CLI installed globally (`npm install -g @angular/cli`)
 
 ### Install and Run
 
 1. Clone the repository:
 ```sh
 git clone https://github.com/brianrclow/portfolio.git
-cd portfolio-website
+cd portfolio
 ```
 
 2. Install the dependencies:
@@ -33,26 +36,29 @@ ng serve
 ```
 Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-### Code scaffolding
+## Docker
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Build and run locally with Docker:
 
-### Build
+```sh
+docker build -t portfolio .
+docker run -p 8080:80 portfolio
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Navigate to `http://localhost:8080/`.
 
-### Running unit tests
+## Deployment
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Deployments are triggered manually via GitHub Actions.
 
-### Running end-to-end tests
+1. Push your changes to `main`
+2. Go to **Actions → Deploy to Fly.io → Run workflow**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+The workflow builds the Docker image on Fly.io's remote builder and deploys it.
 
-### Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-
+### Prerequisites for deployment
+* [flyctl](https://fly.io/docs/hands-on/install-flyctl/) installed
+* `FLY_API_TOKEN` set as a GitHub Actions secret
 
 ## Contact
 
