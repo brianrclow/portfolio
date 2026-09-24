@@ -25,9 +25,15 @@
                 "glob": "**/*",
                 "input": "public",
                 "output": "/assets/"
+              },
+              {
+                "glob": "robots.txt",
+                "input": "public",
+                "output": "/"
               }
             ],
             "styles": [
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -46,7 +52,15 @@
                   "maximumError": "4kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "optimization": {
+                "scripts": true,
+                "fonts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false
+                }
+              }
             },
             "development": {
               "optimization": false,
