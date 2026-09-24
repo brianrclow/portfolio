@@ -14,6 +14,13 @@
   --color-primary-950: #141f15;
 }
 
+/* Matches the <main> background so iOS Safari's rubber-band overscroll and safe areas
+   (notch, home indicator) show green instead of the browser's default white. */
+html,
+body {
+    background-color: var(--color-primary-400);
+}
+
 .menu-overlay {
     transition: opacity 0.2s ease-in-out;
     opacity: 0;
