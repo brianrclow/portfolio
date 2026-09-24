@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'app-work',
-  templateUrl: './work.component.html',
-  styleUrl: './work.component.css'
+    selector: 'app-work',
+    templateUrl: './work.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager
 })
 export class WorkComponent { }

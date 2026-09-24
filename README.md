@@ -5,7 +5,7 @@ Check it out --> [brianrclow.com](https://www.brianrclow.com)
 
 ## Tech Stack
 
-* Frontend: Angular 18, Tailwind CSS
+* Frontend: Angular 22, Tailwind CSS 4
 * Icons: Font Awesome
 * Containerized: Docker (nginx)
 * Hosted: Fly.io
@@ -14,7 +14,7 @@ Check it out --> [brianrclow.com](https://www.brianrclow.com)
 ## Getting Started
 
 ### Prerequisites
-* Node.js and npm installed
+* Node.js 24.15+
 * Angular CLI installed globally (`npm install -g @angular/cli`)
 
 ### Install and Run

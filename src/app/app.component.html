@@ -2,55 +2,57 @@
   <div class="sticky top-0 z-20 p-4 flex justify-between items-center">
     <div class="hidden md:flex space-x-2 justify-center w-full">
       <button
-        class="bg-primary-50 text-primary-500 font-bold py-2 px-4 shadow-md rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center"
+        class="bg-primary-50 text-primary-500 font-bold py-2 px-4 shadow-md rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center cursor-pointer"
         (click)="scrollToSection('home')">
         <i class="fas fa-home mr-2"></i> Home
       </button>
       <button
-        class="bg-primary-50 text-primary-500 font-bold py-2 px-4 shadow-md rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center"
+        class="bg-primary-50 text-primary-500 font-bold py-2 px-4 shadow-md rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center cursor-pointer"
         (click)="scrollToSection('work')">
         <i class="fas fa-laptop mr-2"></i> Work
       </button>
       <button
-        class="bg-primary-50 text-primary-500 font-bold py-2 px-4 shadow-md rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center"
+        class="bg-primary-50 text-primary-500 font-bold py-2 px-4 shadow-md rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center cursor-pointer"
         (click)="scrollToSection('about')">
         <i class="fas fa-user mr-2"></i> About
       </button>
       <button
-        class="bg-primary-50 text-primary-500 font-bold py-2 px-4 shadow-md rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center"
+        class="bg-primary-50 text-primary-500 font-bold py-2 px-4 shadow-md rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center cursor-pointer"
         (click)="scrollToSection('contact')">
         <i class="fas fa-envelope mr-2"></i> Contact
       </button>
     </div>
     <div class="md:hidden ml-auto">
       <button (click)="openMenu()"
-        class="bg-primary-50 text-primary-500 font-bold py-2 px-4 shadow-md rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center">
+        class="bg-primary-50 text-primary-500 font-bold py-2 px-4 shadow-md rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center cursor-pointer">
         <i class="fas fa-bars text-2xl"></i>
       </button>
     </div>
   </div>
 
-  <div *ngIf="isMenuOpen" (click)="closeMenu()" class="fixed inset-0 bg-black bg-opacity-50 z-10"></div>
+  @if (isMenuOpen) {
+    <div (click)="closeMenu()" class="fixed inset-0 bg-primary-950/60 z-10"></div>
+  }
 
   <div [ngClass]="{'menu': true, 'open': isMenuOpen}"
     class="fixed top-0 left-0 w-full bg-primary-400 z-20 p-4 flex flex-col space-y-2">
     <button
-      class="bg-primary-50 text-primary-500 font-bold py-2 px-4 rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center"
+      class="bg-primary-50 text-primary-500 font-bold py-2 px-4 rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center cursor-pointer"
       (click)="scrollToSection('home'); closeMenu()">
       <i class="fas fa-home mr-2 w-6"></i> Home
     </button>
     <button
-      class="bg-primary-50 text-primary-500 font-bold py-2 px-4 rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center"
+      class="bg-primary-50 text-primary-500 font-bold py-2 px-4 rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center cursor-pointer"
       (click)="scrollToSection('work'); closeMenu()">
       <i class="fas fa-laptop mr-2 w-6"></i> Work
     </button>
     <button
-      class="bg-primary-50 text-primary-500 font-bold py-2 px-4 rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center"
+      class="bg-primary-50 text-primary-500 font-bold py-2 px-4 rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center cursor-pointer"
       (click)="scrollToSection('about'); closeMenu()">
       <i class="fas fa-user mr-2 w-6"></i> About
     </button>
     <button
-      class="bg-primary-50 text-primary-500 font-bold py-2 px-4 rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center"
+      class="bg-primary-50 text-primary-500 font-bold py-2 px-4 rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center cursor-pointer"
       (click)="scrollToSection('contact'); closeMenu()">
       <i class="fas fa-envelope mr-2 w-6"></i> Contact
     </button>
@@ -61,7 +63,7 @@
   </section>
   <section class="min-h-screen flex flex-col justify-center items-center" id="work">
     <app-work></app-work>
-    
+
   </section>
   <section class="min-h-screen flex flex-col justify-center items-center" id="about">
     <app-about></app-about>
