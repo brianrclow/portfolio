@@ -3,7 +3,7 @@
     <h2 class="text-4xl font-bold text-center mb-8 text-primary-50">
       Projects
     </h2>
-    <div class="max-w-xl mx-auto">
+    <div class="grid gap-8 lg:grid-cols-2 sm:grid-cols-2">
       <div class="bg-primary-50 shadow-md rounded-md overflow-hidden">
         <div class="p-6">
           <h3 class="text-xl font-semibold">Boise State Student Org App</h3>
@@ -15,6 +15,9 @@
             team in the design and development process, overseeing everything
             from the app icon and logo to the organization and layout of
             information.
+          </p>
+                    <p class="text-gray-700 italic mt-2">
+            *Removed from app stores in 2023. A redesigned successor now serves the same purpose.
           </p>
           <div class="mb-4">
             <h4 class="text-lg font-semibold">Tech Stack</h4>
@@ -38,9 +41,44 @@
               <i class="fas fa-link mr-2 w-6"></i> App Landing Page
             </a>
           </div>
-          <p class="text-gray-700 italic mt-2">
-            *This app has been taken off of app stores as of 2023.
+        </div>
+      </div>
+
+      <div class="bg-primary-50 shadow-md rounded-md overflow-hidden">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-semibold">Soccer Fan App</h3>
+            <span
+              class="bg-primary-500 text-white px-3 py-1 rounded-full text-sm font-medium"
+            >
+              In Progress
+            </span>
+          </div>
+          <p class="text-gray-700 mb-4">
+            A native mobile app concept for supporters of a local soccer club,
+            built around three principles: fast (quick to open, usable even on
+            poor stadium wifi), informative (clear league, team, schedule, and
+            game info without the clutter), and built for one team rather than a
+            generic multi-league experience. Planned features include live
+            matchday notifications, a digital matchday program, season schedule
+            syncing, and fan-specific extras like stadium info and supporter
+            content — with an admin tool planned so content can be updated
+            without shipping a new app release.
           </p>
+          <div>
+            <h4 class="text-lg font-semibold">Tech Stack</h4>
+            <p class="text-gray-700">
+              Swift (iOS), Kotlin (Android), NestJS, PostgreSQL
+            </p>
+          </div>
+          <div class="flex flex-col mt-4">
+            <button
+              (click)="scrollToContact()"
+              class="bg-primary-500 text-white font-bold py-2 px-4 shadow-md rounded-md hover:bg-primary-700 flex items-center cursor-pointer"
+            >
+              <i class="fas fa-futbol mr-2 w-6"></i> Ask me about it
+            </button>
+          </div>
         </div>
       </div>
     </div>

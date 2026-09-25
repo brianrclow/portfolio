@@ -5,4 +5,8 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
     templateUrl: './projects.component.html',
     changeDetection: ChangeDetectionStrategy.Eager
 })
-export class ProjectsComponent { }
+export class ProjectsComponent {
+  scrollToContact() {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  }
+}

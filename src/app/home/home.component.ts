@@ -11,6 +11,10 @@ export class HomeComponent implements OnInit {
     this.obfuscateEmail();
   }
 
+  scrollToExperience() {
+    document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' });
+  }
+
   // an attempt at obfuscating my email against bots
   obfuscateEmail() {
     const emailLink = document.getElementById('email-link');

@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "prebuild": "node scripts/subset-fontawesome.js"
   },
   "private": true,
   "dependencies": {
@@ -28,6 +29,7 @@
     "@angular/compiler-cli": "~22.2.0",
     "@tailwindcss/postcss": "~4.3.3",
     "@types/jasmine": "~6.0.0",
+    "fontawesome-subset": "~4.6.0",
     "istanbul-lib-instrument": "~6.0.3",
     "jasmine-core": "~6.3.0",
     "karma": "~6.4.4",
