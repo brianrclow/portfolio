@@ -8,8 +8,13 @@
       </button>
       <button
         class="bg-primary-50 text-primary-500 font-bold py-2 px-4 shadow-md rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center cursor-pointer"
-        (click)="scrollToSection('work')">
-        <i class="fas fa-laptop mr-2"></i> Work
+        (click)="scrollToSection('experience')">
+        <i class="fas fa-briefcase mr-2"></i> Experience
+      </button>
+      <button
+        class="bg-primary-50 text-primary-500 font-bold py-2 px-4 shadow-md rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center cursor-pointer"
+        (click)="scrollToSection('projects')">
+        <i class="fas fa-code mr-2"></i> Projects
       </button>
       <button
         class="bg-primary-50 text-primary-500 font-bold py-2 px-4 shadow-md rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center cursor-pointer"
@@ -43,8 +48,13 @@
     </button>
     <button
       class="bg-primary-50 text-primary-500 font-bold py-2 px-4 rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center cursor-pointer"
-      (click)="scrollToSection('work'); closeMenu()">
-      <i class="fas fa-laptop mr-2 w-6"></i> Work
+      (click)="scrollToSection('experience'); closeMenu()">
+      <i class="fas fa-briefcase mr-2 w-6"></i> Experience
+    </button>
+    <button
+      class="bg-primary-50 text-primary-500 font-bold py-2 px-4 rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center cursor-pointer"
+      (click)="scrollToSection('projects'); closeMenu()">
+      <i class="fas fa-code mr-2 w-6"></i> Projects
     </button>
     <button
       class="bg-primary-50 text-primary-500 font-bold py-2 px-4 rounded-md hover:bg-primary-600 hover:text-primary-50 flex items-center cursor-pointer"
@@ -61,9 +71,11 @@
   <section class="min-h-screen flex flex-col justify-center items-center" id="home">
     <app-home></app-home>
   </section>
-  <section class="min-h-screen flex flex-col justify-center items-center" id="work">
-    <app-work></app-work>
-
+  <section class="min-h-screen flex flex-col justify-center items-center" id="experience">
+    <app-experience></app-experience>
+  </section>
+  <section class="min-h-screen flex flex-col justify-center items-center" id="projects">
+    <app-projects></app-projects>
   </section>
   <section class="min-h-screen flex flex-col justify-center items-center" id="about">
     <app-about></app-about>
