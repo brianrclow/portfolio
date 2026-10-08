@@ -24,7 +24,7 @@
   "devDependencies": {
     "@angular/build": "~22.2.0",
     "@angular/cli": "~22.2.0",
-    "@angular/compiler-cli": "~22.2.0",
+    "@angular/compiler-cli": "~22.2.1",
     "@tailwindcss/postcss": "~4.3.3",
     "@types/jasmine": "~6.0.0",
     "fontawesome-subset": "~4.6.0",
